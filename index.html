@@ -1,18 +1,96 @@
 <!doctype html>
-<html lang="no"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tigrinja Læring</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;background:#fff9f3;color:#2d211d}header{background:#9a3d24;color:white;padding:28px}
-main{max-width:1000px;margin:auto;padding:30px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:white;border:1px solid #eaded7;border-radius:16px;padding:22px}.price{font-size:24px;font-weight:bold;color:#9a3d24}
-button{background:#9a3d24;color:white;border:0;padding:12px 16px;border-radius:10px;font-weight:bold}
-.note{margin-top:30px;background:#f2d6c8;padding:18px;border-radius:12px}
-</style></head><body>
-<header><h1>Tigrinja Læring • ትግርኛ</h1><p>Digitale læringsprodukter som kunden kan laste ned etter betaling.</p></header>
-<main><h2>Digitale produkter</h2><div class="grid">
-<div class="card"><h3>Tigrinja Fidel - startpakke</h3><p>13 sider med de første 10 bokstavfamiliene, tracing og øving.</p><div class="price">79 kr</div><p><button>Kjøp - kobles til betaling</button></p></div>
-<div class="card"><h3>Tigrinja tallkort 1-10</h3><p>10 klippekort med tall, Geez-tall og Tigrinja-ord.</p><div class="price">59 kr</div><p><button>Kjøp - kobles til betaling</button></p></div>
-<div class="card"><h3>Tigrinja hilsener</h3><p>Minihefte med vanlige hilsener og skriveøvelser.</p><div class="price">49 kr</div><p><button>Kjøp - kobles til betaling</button></p></div>
-<div class="card"><h3>Komplett startpakke</h3><p>Alle tre produktene samlet.</p><div class="price">149 kr</div><p><button>Kjøp - kobles til betaling</button></p></div>
-</div><div class="note"><strong>For eier:</strong> Betalingsknappene er foreløpig ikke aktive. Koble dem til en digital butikk/betalingsplattform før publisering.</div>
-</main></body></html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tigrinja Læring – enkle digitale læringsressurser for barn, ungdom og voksne.">
+  <title>Tigrinja Læring</title>
+  <style>
+    :root{--bg:#fff9f3;--paper:#fff;--text:#2d211d;--muted:#71645e;--accent:#9a3d24;--soft:#f2d6c8;--line:#eaded7;--dark:#241b17}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .wrap{max-width:1080px;margin:auto;padding:0 20px}
+    header{background:linear-gradient(135deg,#9a3d24,#6f2d1d);color:#fff;padding:70px 0 56px}
+    .badge{display:inline-block;background:rgba(255,255,255,.14);padding:7px 12px;border-radius:999px;font-weight:800}
+    h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.03;margin:16px 0 14px}
+    h2{font-size:clamp(1.8rem,4vw,2.5rem);margin:0 0 10px}
+    .lead{font-size:1.15rem;max-width:720px;color:#f8e9e2}
+    main{padding:52px 0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:26px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 14px 34px rgba(57,34,24,.06)}
+    .card h3{margin:0 0 8px;font-size:1.35rem}
+    .price{font-size:1.8rem;font-weight:900;color:var(--accent);margin:14px 0}
+    .soon{display:inline-block;background:#eee8e4;color:#6f625b;border:1px solid #ded4ce;padding:11px 16px;border-radius:12px;font-weight:800;cursor:not-allowed}
+    .best{border:2px solid var(--accent);position:relative}
+    .best:before{content:"Beste verdi";position:absolute;top:-13px;right:18px;background:var(--accent);color:#fff;padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:800}
+    .section{padding:34px 0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+    .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:900;margin-bottom:10px}
+    .notice{margin-top:28px;background:var(--soft);border-radius:16px;padding:20px}
+    footer{padding:34px 0;color:var(--muted);font-size:.95rem}
+    @media(max-width:760px){.grid,.steps{grid-template-columns:1fr}header{padding-top:48px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">Tigrinja • ትግርኛ</span>
+    <h1>Lær tigrinja enkelt, steg for steg</h1>
+    <p class="lead">Digitale læringsressurser for barn, ungdom og voksne. Last ned, skriv ut og lær i ditt eget tempo.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section">
+    <h2>Digitale produkter</h2>
+    <p>Produktene er ferdig planlagt. Betaling åpnes snart.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Tigrinja Fidel – startpakke</h3>
+        <p>13 sider med de første 10 bokstavfamiliene, tracing og skriveøvelser.</p>
+        <div class="price">79 kr</div>
+        <span class="soon">Kommer snart</span>
+      </article>
+
+      <article class="card">
+        <h3>Tigrinja tallkort 1–10</h3>
+        <p>10 klippekort med tall, Geez-tall og Tigrinja-ord for enkel øving.</p>
+        <div class="price">59 kr</div>
+        <span class="soon">Kommer snart</span>
+      </article>
+
+      <article class="card">
+        <h3>Tigrinja hilsener</h3>
+        <p>Minihefte med vanlige hilsener, uttalehjelp og skriveøvelser.</p>
+        <div class="price">49 kr</div>
+        <span class="soon">Kommer snart</span>
+      </article>
+
+      <article class="card best">
+        <h3>Komplett startpakke</h3>
+        <p>Alle tre produktene samlet til en lavere totalpris.</p>
+        <div class="price">149 kr</div>
+        <span class="soon">Kommer snart</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Slik skal kjøpet fungere</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><strong>Velg produkt</strong><p>Kunden velger heftet eller pakken som passer.</p></div>
+      <div class="step"><div class="num">2</div><strong>Betal sikkert</strong><p>Betalingsløsningen kobles inn når kontoen er klar.</p></div>
+      <div class="step"><div class="num">3</div><strong>Last ned automatisk</strong><p>Etter betaling får kunden tilgang til PDF-filen uten å måtte kontakte deg.</p></div>
+    </div>
+
+    <div class="notice"><strong>Betaling er ikke aktiv ennå.</strong> Ingen kan bli belastet via denne nettsiden nå. Når betalingskontoen er godkjent, kan kjøpsknappene kobles på uten å bygge siden på nytt.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Tigrinja Læring • Digitale læringsressurser</div>
+</footer>
+</body>
+</html>
